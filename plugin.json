@@ -1,0 +1,35 @@
+{
+    "id": "paloalto-xsiam",
+    "version": "0.0.1",
+    "meta": {
+        "label": "Palo Alto Cortex XSIAM",
+        "description": "Plugin providing python connectors to load data from the Palo Alto Cortex XSIAM security platform.",
+        "author": "admin",
+        "icon": "icon-lock",
+        "tags": ["Security"],
+        "url": "",
+        "licenseInfo": "Apache Software License"
+    },
+    "params": [
+        {
+            "name": "cortexXsiamTenantFqdn",
+            "label": "FQDN",
+            "type": "STRING",
+            "description": "The raw FQDN of the Palo Alto Cortex XSIAM tenant (without https:// or / at the end).",
+            "mandatory": true
+        },
+        {
+            "name": "cortexXsiamApiKeyId",
+            "label": "API key ID",
+            "type": "STRING",
+            "description": "ID of the API key.",
+            "mandatory": true
+        },
+        {
+            "name": "cortexXsiamApiKey",
+            "label": "API key",
+            "type": "PASSWORD",
+            "mandatory": true
+        }
+    ]
+}

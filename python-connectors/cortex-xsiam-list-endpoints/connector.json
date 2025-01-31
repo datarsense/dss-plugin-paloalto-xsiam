@@ -1,0 +1,11 @@
+
+{
+    "meta" : {
+        "label": "Get endpoint list",
+        "description": "Get a detailed list of XSIAM protected endpoints",
+        "icon": "icon-desktop"
+    },
+    "readable": true,
+    "writable": false,
+    "params": []
+}

@@ -1,0 +1,33 @@
+
+{
+    "meta" : {
+        "label": "XQL Query",
+        "description": "Execute an XQL query",
+        "icon": "icon-desktop"
+    },
+    "readable": true,
+    "writable": false,
+    "params": [
+        {
+            "name": "startDateTime",
+            "type": "STRING",
+            "label": "Start of the data retrieval range - Timestamp in ISO 8601",
+            "description": "Example: 2021-04-05T08:22:37Z",
+            "mandatory": true
+        },
+        {
+            "name": "endDateTime",
+            "type": "STRING",
+            "label": "End of the data retrieval range - Timestamp in ISO 8601",
+            "description": "Example: 2021-04-05T08:22:37Z",
+            "mandatory": true
+        },
+        {
+            "name": "xqlQuery",
+            "type": "TEXTAREA",
+            "label": "XQL Query",
+            "description": "Check XQL query language syntax on https://docs-cortex.paloaltonetworks.com/r/Cortex-XSIAM/Cortex-XSIAM-Documentation/Cortex-XSIAM-XQL.",
+            "mandatory": true
+        }
+    ]
+}
