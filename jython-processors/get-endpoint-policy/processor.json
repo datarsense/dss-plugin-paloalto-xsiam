@@ -1,0 +1,22 @@
+{
+    "meta" : {
+        "label": "Get endpoint policy name",
+        "description": "Get endpoint policy name",
+        "icon": "fas fa-puzzle-piece"
+    },
+
+    "mode": "CELL",
+
+    "params": [
+        {
+            "name": "endpoint_id_column",
+            "label": "Endpoint ID column",
+            "type": "COLUMN",
+            "description": "Column containing the Cortex XSIAM endpoint agent ID",
+            "columnRole": "main",
+            "mandatory": true
+        }
+    ],
+    
+    "useKernel" : true
+}
