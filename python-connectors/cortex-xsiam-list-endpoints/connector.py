@@ -10,9 +10,20 @@ class GetEndpointList(Connector):
 
   def __init__(self, config, plugin_config):
     Connector.__init__(self, config, plugin_config)  # pass the parameters to the base class
-    self.fqdn = self.plugin_config.get("cortexXsiamTenantFqdn")
-    self.authTokenId = self.plugin_config.get("cortexXsiamApiKeyId")
-    self.authToken = self.plugin_config.get("cortexXsiamApiKey")
+    if (self.config.get("cortexXsiamTenantFqdn") is not None) and (self.config.get("cortexXsiamTenantFqdn")):
+      self.fqdn = self.config.get("cortexXsiamTenantFqdn")
+    else:
+      self.fqdn = self.plugin_config.get("cortexXsiamTenantFqdn")
+    
+    if (self.config.get("cortexXsiamApiKeyId") is not None) and (self.config.get("cortexXsiamApiKeyId")):
+      self.authTokenId = self.config.get("cortexXsiamApiKeyId")
+    else:
+      self.authTokenId = self.plugin_config.get("cortexXsiamApiKeyId")
+
+    if (self.config.get("cortexXsiamApiKey") is not None) and (self.config.get("cortexXsiamApiKey")):
+      self.authToken = self.config.get("cortexXsiamApiKey")
+    else:
+      self.authToken = self.plugin_config.get("cortexXsiamApiKey")
 
   def get_read_schema(self):
     return {

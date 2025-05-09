@@ -1,6 +1,6 @@
 {
     "id": "paloalto-xsiam",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "meta": {
         "label": "Palo Alto Cortex XSIAM",
         "description": "Plugin providing python connectors to load data from the Palo Alto Cortex XSIAM security platform.",

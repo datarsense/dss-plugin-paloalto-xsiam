@@ -11,15 +11,15 @@
         {
             "name": "startDateTime",
             "type": "STRING",
-            "label": "Start of the data retrieval range - Timestamp in ISO 8601",
-            "description": "Example: 2021-04-05T08:22:37Z",
+            "label": "Start of the data retrieval range - Timestamp in ISO 8601 without timezone",
+            "description": "Example: 2021-04-05T08:22:37",
             "mandatory": true
         },
         {
             "name": "endDateTime",
             "type": "STRING",
-            "label": "End of the data retrieval range - Timestamp in ISO 8601",
-            "description": "Example: 2021-04-05T08:22:37Z",
+            "label": "End of the data retrieval range - Timestamp in ISO 8601 without timezone",
+            "description": "Example: 2021-04-05T08:22:37",
             "mandatory": true
         },
         {
@@ -28,6 +28,31 @@
             "label": "XQL Query",
             "description": "Check XQL query language syntax on https://docs-cortex.paloaltonetworks.com/r/Cortex-XSIAM/Cortex-XSIAM-Documentation/Cortex-XSIAM-XQL.",
             "mandatory": true
+        },
+        {
+            "name": "advancedSettings",
+            "label": "Advanced settings",
+            "type": "BOOLEAN"
+        },
+        {
+            "name": "cortexXsiamTenantFqdn",
+            "label": "FQDN",
+            "type": "STRING",
+            "description": "The raw FQDN of the Palo Alto Cortex XSIAM tenant (without https:// or / at the end).",
+            "visibilityCondition": "model.advancedSettings"
+        },
+        {
+            "name": "cortexXsiamApiKeyId",
+            "label": "API key ID",
+            "type": "STRING",
+            "description": "ID of the API key.",
+            "visibilityCondition": "model.advancedSettings"
+        },
+        {
+            "name": "cortexXsiamApiKey",
+            "label": "API key",
+            "type": "PASSWORD",
+            "visibilityCondition": "model.advancedSettings"
         }
     ]
 }
